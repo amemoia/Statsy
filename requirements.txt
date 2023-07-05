@@ -1,0 +1,6 @@
+py-cord==2.4.1
+orjson
+aiodns
+brotlipy
+PyNaCl
+python-dotenv
