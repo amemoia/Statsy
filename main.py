@@ -1,4 +1,5 @@
 import discord
+import overfast
 import time
 from modules import tools
 
@@ -6,6 +7,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 bot = discord.Bot(intents=intents)
+cogs = ['overwatch']
 
 def console_print(msg: str, msg_type = None):
     if not msg_type:
@@ -35,5 +37,8 @@ async def ping(ctx):
 async def invite(ctx):
     url = discord.utils.oauth_url(client_id=bot.user.id, permissions=discord.Permissions.advanced())
     await tools.embed(bot, ctx, "📨 Invite Link", f"You can invite me using [this link]({url}).")
+
+for cog in cogs:
+    bot.load_extension(f'cogs.{cog}')
 
 bot.run(tools.token())
