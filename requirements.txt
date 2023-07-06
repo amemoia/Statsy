@@ -4,4 +4,4 @@ aiodns
 brotlipy
 PyNaCl
 python-dotenv
-overfast-py
+overfast-py>=1.1
