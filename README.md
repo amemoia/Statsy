@@ -1,2 +1,2 @@
-# bastion
- A Discord bot using the OverFast API.
+# Statsy
+A Discord bot using the OverFast API.
